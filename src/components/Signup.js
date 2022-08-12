@@ -10,7 +10,7 @@ const Signup = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-    const { signUp } = useUserAuth();
+    const { signUp, signInWithGoogle} = useUserAuth();
     let navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -20,6 +20,17 @@ const Signup = () => {
             navigate('/');
         }
         catch (err) {
+            setError(err.message)
+        }
+    }
+    const handleGoogleSignIn = async (e) => {
+        e.preventDefault();
+        setError("")
+        try{
+            await signInWithGoogle()
+            navigate('/home')
+        }
+        catch(err){
             setError(err.message)
         }
     }
@@ -51,7 +62,7 @@ const Signup = () => {
                 <div>
                     <GoogleButton
                         className="g-btn"
-                        type="dark"
+                        type="dark" onClick={handleGoogleSignIn}
                     />
                 </div>
             </div>
