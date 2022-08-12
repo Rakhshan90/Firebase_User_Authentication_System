@@ -7,7 +7,7 @@ import Signup from './components/Signup';
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import Home from './components/Home';
 import ProtectedRoute from './components/ProtectedRoute'
-
+import Forgot from './components/Forgot';
 function App() {
   return (
     <Container>
@@ -17,6 +17,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Login />} />
               <Route path='/signup' element={<Signup />} />
+              <Route path='/forgot' element={<Forgot />} />
               <Route path='/home' element={<ProtectedRoute> <Home /> </ProtectedRoute>} />
             </Routes>
           </UserAuthContextProvider>

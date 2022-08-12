@@ -6,6 +6,7 @@ import {
     onAuthStateChanged,
     GoogleAuthProvider,
     signInWithPopup,
+    sendPasswordResetEmail
 } from 'firebase/auth';
 import { auth } from "../firebase";
 
@@ -28,13 +29,16 @@ export function UserAuthContextProvider({ children }) {
         const googleAuthProvider = new GoogleAuthProvider()
         return signInWithPopup(auth, googleAuthProvider)
     }
+    function forgotPassword(email){
+        return sendPasswordResetEmail(auth, email, {url: 'http://localhost:3000/'})
+    }
     useEffect(()=>{
         const Unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
             setUser(currentUser);
         })
         return Unsubscribe;
     },[])
-    return <userAuthContext.Provider value={{user, signUp, logIn, logOut, signInWithGoogle}}>{children}</userAuthContext.Provider>
+    return <userAuthContext.Provider value={{user, signUp, logIn, logOut, signInWithGoogle, forgotPassword}}>{children}</userAuthContext.Provider>
 }
 
 export function useUserAuth(){
