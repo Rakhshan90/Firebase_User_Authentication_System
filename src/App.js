@@ -8,6 +8,7 @@ import { UserAuthContextProvider } from './context/UserAuthContext';
 import Home from './components/Home';
 import ProtectedRoute from './components/ProtectedRoute'
 import Forgot from './components/Forgot';
+import Reset from './components/Reset';
 function App() {
   return (
     <Container>
@@ -18,6 +19,7 @@ function App() {
               <Route path='/' element={<Login />} />
               <Route path='/signup' element={<Signup />} />
               <Route path='/forgot' element={<Forgot />} />
+              <Route path='/reset' element={<Reset />} />
               <Route path='/home' element={<ProtectedRoute> <Home /> </ProtectedRoute>} />
             </Routes>
           </UserAuthContextProvider>
