@@ -30,9 +30,9 @@ const Login = () => {
             await signInWithGoogle()
             navigate('/home');
         }
-        catch(err){
+        catch (err) {
             setError(err.message)
-        }   
+        }
     }
     return (
         <>
@@ -47,6 +47,9 @@ const Login = () => {
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Control onChange={(e) => { setPassword(e.target.value) }} type="password" placeholder="Password" />
                     </Form.Group>
+                    <div className="link2">
+                        <Link className="link" to="/forgot">Forgot Password?</Link>
+                    </div>
 
                     <div className="d-grid gap-2">
                         {/* <Button variant="primary" type="submit">
@@ -64,9 +67,8 @@ const Login = () => {
                 </div>
             </div>
 
-            <div className="p-4 box mt-3 text-center box-f-s">
-                <Link className="link" to="/forgot">Forgot Password</Link>
-                <Link className="link" to="/signup">Sign up</Link>
+            <div className="p-4 box mt-3 text-center">
+                Don't have an account? <Link className="link" to="/signup">Sign up</Link>
             </div>
         </>
     );
