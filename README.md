@@ -1,9 +1,14 @@
-# React-Firebase User Authentication System
-!!! hey peoples !!! - I have created a User-authentication system that provides access control for systems by checking to see if a
-user's credentials match the credentials in a database of authorized users or in a data authentication
-server.
-It also has a feature of forgot password. 
-Tech Involved: Firebase, React.js, Context API, Protected Routes.
+# TrustMate
+TrustMate is a user authentication system that grants access to the system to only authenticated users and prevents unauthorized access.
+
+
+##Features
+1. There are two ways to sign in, using an email address and a password, or using a Google account.
+2. Users can reset their passwords if they forget them.
+Tech Involved: Firebase, React.js, Bootstrap, HTML, CSS, Context API, Protected Routes.
+
+###DEMO
+https://user-images.githubusercontent.com/92143665/236200412-0d81c7b2-936b-4ee3-b119-9e1785372ae4.mp4
 
 
 # Getting Started with Create React App
@@ -67,7 +72,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/m
 
 ### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This section has moved here: [https://faceb
+
+
+
+ook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
