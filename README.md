@@ -1,13 +1,15 @@
 # TrustMate
-TrustMate is a user authentication system that grants access to the system to only authenticated users and prevents unauthorized access.
+
+## TrustMate is a user authentication system that grants access to the system to only authenticated users and prevents unauthorized access.
 
 
-##Features
+## Features
 1. There are two ways to sign in, using an email address and a password, or using a Google account.
 2. Users can reset their passwords if they forget them.
 Tech Involved: Firebase, React.js, Bootstrap, HTML, CSS, Context API, Protected Routes.
 
-###DEMO
+## DEMO
+
 https://user-images.githubusercontent.com/92143665/236200412-0d81c7b2-936b-4ee3-b119-9e1785372ae4.mp4
 
 
